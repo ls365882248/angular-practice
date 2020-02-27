@@ -1,14 +1,48 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DetailComponent } from './detail/detail.component';
+import { InMemoryDataService } from './in-memory-data.service';
+import { AngularAppComponent } from './angular-app/angular-app.component';
+import { HeaderComponent } from './angular-app/header/header.component';
+import { ShoppingListComponent } from './angular-app/shopping-list/shopping-list.component';
+import { ShoppingEditComponent } from './angular-app/shopping-list/shopping-edit/shopping-edit.component';
+import { RecipeComponent } from './angular-app/recipe/recipe.component';
+import { RecipeListComponent } from './angular-app/recipe/recipe-list/recipe-list.component';
+import { RecipeItemComponent } from './angular-app/recipe/recipe-item/recipe-item.component';
+import { RecipeDetailComponent } from './angular-app/recipe/recipe-detail/recipe-detail.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeroesComponent,
+    DashboardComponent,
+    DetailComponent,
+    AngularAppComponent,
+    HeaderComponent,
+    ShoppingListComponent,
+    ShoppingEditComponent,
+    RecipeComponent,
+    RecipeListComponent,
+    RecipeItemComponent,
+    RecipeDetailComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, {dataEncapsulation: false}
+    )
   ],
   providers: [],
   bootstrap: [AppComponent]
