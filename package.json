@@ -25,7 +25,13 @@
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.26",
+    "video.js": "7.6.6",
+    "videojs-contrib-hls": "5.14.1",
+    "@videojs/http-streaming": "1.0.1",
+    "videojs-resolution-switcher": "0.4.2",
+    "videojs-contrib-quality-levels": "2.0.4",
+    "flv.js": "1.5.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.13.0",

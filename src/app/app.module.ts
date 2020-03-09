@@ -18,6 +18,9 @@ import { RecipeComponent } from './angular-app/recipe/recipe.component';
 import { RecipeListComponent } from './angular-app/recipe/recipe-list/recipe-list.component';
 import { RecipeItemComponent } from './angular-app/recipe/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './angular-app/recipe/recipe-detail/recipe-detail.component';
+import { VideoComponent } from './video/video.component';
+import { FlvComponent } from './flv/flv.component';
+import { MediaComponent } from './media/media.component';
 
 
 @NgModule({
@@ -34,6 +37,9 @@ import { RecipeDetailComponent } from './angular-app/recipe/recipe-detail/recipe
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
+    VideoComponent,
+    FlvComponent,
+    MediaComponent,
   ],
   imports: [
     BrowserModule,
