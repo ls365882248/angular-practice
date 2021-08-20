@@ -10,11 +10,8 @@ export class MediaComponent implements OnInit {
     controls: true,
     preload: 'none',
     sources: [{
-      src: 'https://vjs.zencdn.net/v/oceans.mp4',
-      type: 'video/mp4'
-    }, {
-      src: 'https://vjs.zencdn.net/v/oceans.webm',
-      type: 'video/webm'
+      src: 'rtmp://localhost:7001/live/test.flv',
+      type: 'rtmp/flv'
     }],
     dataSetup: {
       aspectRatio: '640:267',
@@ -22,8 +19,9 @@ export class MediaComponent implements OnInit {
     }
   }
   flvOptions = {
-    type: 'mp4',
-    url: 'https://vjs.zencdn.net/v/oceans.mp4'
+    type: 'flv',
+    isLive: true,
+    url: 'http://localhost:7001/live/test.flv'
   };
   constructor() { }
 

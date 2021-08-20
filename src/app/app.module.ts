@@ -2,9 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { DeepModuleModule } from './deep-module/deep-module.module';
 
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/heroes.component';
+import { HeroesComponent, ChildComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -21,6 +22,7 @@ import { RecipeDetailComponent } from './angular-app/recipe/recipe-detail/recipe
 import { VideoComponent } from './video/video.component';
 import { FlvComponent } from './flv/flv.component';
 import { MediaComponent } from './media/media.component';
+import { DeepModuleService } from './deep-module/deep-module.service';
 
 
 @NgModule({
@@ -31,6 +33,7 @@ import { MediaComponent } from './media/media.component';
     DetailComponent,
     AngularAppComponent,
     HeaderComponent,
+    ChildComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
     RecipeComponent,
@@ -46,8 +49,9 @@ import { MediaComponent } from './media/media.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    DeepModuleModule,
     HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, {dataEncapsulation: false}
+      InMemoryDataService, { dataEncapsulation: false }
     )
   ],
   providers: [],
